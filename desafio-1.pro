@@ -4,8 +4,16 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        funciones.cpp \
-        main.cpp
+        logica.cpp \
+        main.cpp \
+        memoria.cpp \
+        tablero.cpp \
+        util.cpp \
+        visual.cpp
 
 HEADERS += \
-    funciones.h
+    logica.h \
+    memoria.h \
+    tablero.h \
+    util.h \
+    visual.h
