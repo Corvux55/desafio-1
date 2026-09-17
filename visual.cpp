@@ -6,12 +6,14 @@
 using namespace std;
 
 char obtenerSimbolo(unsigned char valor) {
+    if (valor == 0) return '.';
     if (valor == 1) return 'A';
     if (valor == 2) return 'B';
     if (valor == 3) return 'C';
     if (valor == 4) return 'D';
     if (valor == 5) return 'E';
     if (valor == 6) return 'F';
+    if (valor == 7) return '*';
     return ' ';
 }
 void mostrarTablero(unsigned char* tablero, int filas, int columnas) {
@@ -44,7 +46,15 @@ void mostrarBits(unsigned char* tablero, int filas, int columnas) {
     }
     cout << endl;
 }
-
+void mostrarEstadisticas(int filas, int columnas, int eliminacionesUsuario, int fichasEliminadas, int combinacionesDetectadas, int puntuacion){
+    cout << "\n ---Estadisticas---"<<endl;
+    cout << "Dimenciones actuales: "<< filas <<" x " <<columnas <<endl;
+    cout << "eliminaciones del usuario: " << eliminacionesUsuario <<endl;
+    cout << "Fichas eliminadas en total: " << fichasEliminadas << endl;
+    cout << "Combinaciones detectadas: " << combinacionesDetectadas <<endl;
+    cout << "Puntuacion: " << puntuacion << endl;
+    cout << endl;
+}
 void mostrarMenu() {
     cout << "1. Eliminar ficha" << endl;
     cout << "2. Agregar fila" << endl;
@@ -52,6 +62,7 @@ void mostrarMenu() {
     cout << "4. Agregar columna" << endl;
     cout << "5. Eliminar columna" << endl;
     cout << "6. Ver bits en memoria" << endl;
+    cout << "7. Ver estadisticas" << endl;
     cout << "0. Salir" << endl;
     cout << "Opcion: ";
 }

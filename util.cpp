@@ -6,6 +6,10 @@ void iniciarAleatorio(){
     srand(time(0));
 }
 unsigned char fichaAleatoria(){
+    int r= rand()%100;
+    if (r<5){
+        return 7;
+    }
     return(rand()%6)+1;
 }
 int dimensionesValidas(int filas, int columnas){
